@@ -3,7 +3,7 @@ module Api
     class UsersController < ApplicationController
       # The following line forces authentication for all of the following actions
       # You may want to limit that to specific actions with only: [:action_name_1, :action_name_2] as an argument
-      before_filter :authenticate
+      before_filter :authenticate, only: [:index]
 
       def index
         # This is probably dangerous without a serializer as it will return sensitive information

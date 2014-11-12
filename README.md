@@ -36,8 +36,6 @@ curl -d "user[name]=john&user[password]=mysecurepassword&user[password_confirmat
 
 In *POST example* example we are assuming that the model has *name*, *password_digest*, *token*, and *email* fields. The *password_digest* field was added according to [bcrypt](https://github.com/codahale/bcrypt-ruby) gem's usage, but encryption is not implemented yet for you.
 
-
-
 ## Acknowledgements
 
 Code *very heavily* borrowed and inspired by [TangoSource's repo](https://github.com/tangosource/rails-api-token-authentication)
