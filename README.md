@@ -11,10 +11,6 @@ POST /api/v1/users               api/v1/users#create
 GET  /api/v1/users/:id           api/v1/users#show
 ```
 
-## Warning
-
-The user's password is not encrypted here. You'll need to do that yourself with [BCrypt](https://github.com/codahale/bcrypt-ruby). Not encrypting a password is dangerous.
-
 ## Testing with Curl
 
 If you want to test API requests using just the terminal you could use curl.
