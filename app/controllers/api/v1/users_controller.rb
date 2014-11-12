@@ -1,6 +1,8 @@
 module Api
   module V1
     class UsersController < ApplicationController
+      # The following line forces authentication for all of the following actions
+      # You may want to limit that to specific actions with only: [:action_name_1, :action_name_2] as an argument
       before_filter :authenticate
 
       def index
@@ -27,12 +29,7 @@ module Api
         params.require(:user).permit(:name, :email, :password, :password_confirmation, :token)
       end
 
-      protected
-      def authenticate
-        authenticate_or_request_with_http_token do |token, options|
-          User.find_by(token: token)
-        end
-      end
+
     end
   end
 end
