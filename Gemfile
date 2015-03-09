@@ -8,3 +8,4 @@ gem 'spring', group: :development
 gem 'pg'
 gem 'bcrypt'
 gem 'rack-cors', require: 'rack/cors'
+gem 'pry-rails'
